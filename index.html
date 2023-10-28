@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Gestion des utilisateurs</title>
+    <link type="text/css" href="./style.css" rel="stylesheet">
+    <link rel="icon" href="./favicon.ico" />
+    <script src="https://raw.githack.com/brython-dev/brython/master/www/src/brython.js"
+		crossorigin="anonymous">
+	</script>
+	<script src="https://raw.githack.com/brython-dev/brython/master/www/src/brython_stdlib.js"
+		crossorigin="anonymous">
+	</script>
+	<script type="text/python" src="./components/components.py" id="components"></script>
+	<script type="text/python" src="./main.py"></script>
+  </head>
+
+  <body onload="brython()">
+	  <div id="main">
+		<div id="users">
+		</div>
+
+		<div id="content">
+			<div>
+				<h1>Utilisateurs</h1>
+				<div id="outer">
+					<table>
+						<thead>
+							<tr>
+								<th>Actif</th>
+								<th>Pseudo</th>
+								<th>Dernière session SSH</th>
+								<th>Quota</th>
+							</tr>
+						</thead>
+						<tbody id="tableau">
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div class="actions">
+				<h1>Actions</h1>
+				<div id="add">
+					<h2>Ajouter</h2>
+					<form action="" method="get" class="add-user">
+						<div class="add-user">
+							<label for="name">Pseudo de l'utilisateur</label>
+							<input id="pseudo" type="text" name="name" required/>
+						</div>
+						<div class="add-user">
+							<label for="text">Quota de l'utilisateur</label>
+							<input id="quota_user" type="text" name="quota" required/>
+						</div>
+						<div class="add-user" id="ajouter">
+							<input id="valider" type="submit" value="Ajouter"/>
+						</div>
+					</form>
+				</div>
+				<div id="delete">
+					<h2>Supprimer</h2>
+					<select id="delete-users">
+						<option value="">Choisir un utilisateur</option>
+					</select>
+					<input id="delete_user" type="submit" value="Supprimer"/>
+				</div>
+			</div>
+		</div>
+    </div>
+  </body>
+</html>

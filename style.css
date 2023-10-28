@@ -1,0 +1,113 @@
+#main {
+	display: block;
+	margin: 0 auto;
+	justify-content: center;
+	background-color: white;
+}
+
+input[type="button"], input[type="submit"] {
+	background-color: #06b390;
+	border-collapse: collapse;
+	border: 1px solid gray;
+	color: white;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#ajouter {
+	justify-content: center;
+	margin-top: 3px;
+}
+
+label {
+	display: grid;
+	width: 160px;
+    text-align: left;
+}
+
+input[type="submit"]:hover, input[type="button"]:hover {
+	transform: scale(1.1);
+	background-color: rgb(20, 141, 117)
+}
+
+p, h1, h2, label, connected-users {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#content {
+	padding-left: 150px;
+}
+
+thead {
+	background-color: #06b390;
+    color: #ffffff;
+    text-align: left;
+}
+
+#users {
+	justify-content: center;
+	text-align: center;
+	font-size: 2rem;
+}
+
+tbody>tr:hover {
+	background-color: #d2d8d4;
+}
+
+#outer {
+	max-height: 19em;
+	display: inline-flex;
+	overflow: auto;
+}
+
+table {
+	border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+	display: inline-table;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+th, td {
+	padding: 18px;
+	text-align: left;
+	border: 1px solid #dddddd;
+}
+
+#color-quota {
+	width: 16px;
+	height: 16px;
+	-moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+	display: inline-block;
+	position: relative;
+	top: 3px;
+	background-color: rgb(78, 172, 78);
+}
+
+#color-connected {
+	width: 16px;
+	height: 16px;
+	-moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+	display: inline-block;
+	position: relative;
+	top: 3px;
+	background-color: red;
+}
+
+#color-quota {
+	left: 5px;
+}
+
+tr.quota-exceed #color-quota {
+	background-color: red;
+}
+
+tr.connected #color-connected {
+	background-color: rgb(78, 172, 78);
+}
