@@ -27,9 +27,6 @@ def fetch_json(response):
 async def my_handler(json):
 	global REGISTERED_USERS, CONNECTED_USERS
 
-	if not isinstance(json, list):
-		json = [json]
-
 	for user in json:
 		add_form_value(user["pseudo"])
 		add_row(user["pseudo"], user["quota"], user["quota_max"],
